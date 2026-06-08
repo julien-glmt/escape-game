@@ -6,7 +6,7 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.includes("@") || !email.includes(".")) {
       setError("Adresse email invalide.");
